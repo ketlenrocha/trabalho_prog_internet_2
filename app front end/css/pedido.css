@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: #FFF;    
+  font-family: 'Open Sans', sans-serif; 
+  text-rendering: optimizeLegibility;
+}
+main{
+  padding-top: 5rem;
+  align-items: center;
+}
+.checkbtn {
+	font-size: 30px;
+	color: black;
+	float: right;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+#check {
+	display: none;
+}
+
+header{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	border-top: 6px solid #EEE1D1;
+	background: rgba(255,255,255,0.7);	
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 2px 2px #efefef;
+	z-index: 9999;
+}
+
+a:link, a:visited {
+  color: #9A8B7A;
+  text-decoration: none;
+}
+a:hover{
+  color:#EEE1D1;
+  transition: 0.5s;
+}
+h2{
+  color: #C7B299;
+}
+form {
+  background-color: #EEE1D1;
+  border-top: solid 5px #C7B299;
+  width: 100%;
+  padding: 50px;
+  text-align: left;
+}
+input{
+    height: 20px;
+    background-color: #EEE1D1;
+    margin: 15px 0;
+    border-color: #C7B299;
+    transition: 0.2s;
+}
+.menu li {
+	display: inline-flex;
+	padding: 20px 25px;
+    list-style: none;
+}
+
+.menu li a:link,
+.menu li a:visited {
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: bolder;
+}
+
+img{
+  width: 50%; 
+  height: auto;
+  margin-bottom: 15px;   
+}
+
+table, td, th {
+    border: 2px solid #9A8B7A;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 90%;
+  }  
+  th {
+    height: 60px;
+    
+  }
+  td{
+    width: 60px;
+  }
+.rodape {
+  background-color: #F4E9DC;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 50px;
+}
+.cont01 {
+    background-color: #EEE1D1;
+    border-top: solid 5px #C7B299;
+    width: 40%;
+    margin: 30px;
+    text-align: center;
+    height: auto;
+    padding: 30px;
+}
+.rede li {
+  padding: 10px;
+  list-style: none;
+}
+.rodape p {
+  margin: 10px;
+  text-align: center;
+  font-size: 90%;
+}
+.text1 {
+  margin: 0;
+  font-size: 100%;
+  line-height: 145%;
+}

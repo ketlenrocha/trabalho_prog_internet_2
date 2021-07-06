@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="br">
+
+<head>    
+    <meta charset="UTF-8">
+    <title>HAMBURGUERIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/pedido.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+            <ul class="menu">
+                <li> <a id='menuHome' href="#">HOME</a> </li>
+                <li> <a id='menuPedido' href="#">PEDIDO</a> </li>      
+                <li> <a id='menuCliente' href="#">CLIENTE</a> </li>
+                <li> <a id='menuLogin' href="#">LOGIN</a> </li>
+                <li><a href="#sec1">CONTATO</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <main></main>
+
+    <footer class="rodape">
+
+        <div class="cont01" id="sec1">
+            <h3>CONTATO</h3>
+            <p class="text1"> Av. Grécia 330, sala 401 – Passo da Areia </p>
+            <p class="text1"> Porto Alegre – RS </p>
+            <p class="text1"> (51) 35486215 – (51) 99622.2121 </p>
+            <p class="text1"> contato@hamburgueria.com.br </p>
+        </div>
+
+        <div class="cont01" id="sec5">
+            <h3>REDES SOCIAIS</h3>
+            <nav>
+                <ul class="rede">
+                    <li><a href="#Facebook"> </i> Facebook Hamburgueria </a></li>
+                    <li><a href="#Instagram"> </i> Instagram Hamburgueria</a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=+5551996222121"></i> Whatsapp: (51) 99622.2121</a> </li>
+                </ul>
+            </nav>
+        </div>
+
+</body>
+
+<script>
+    var linkNovo = document.querySelector("#menuHome");
+        linkNovo.onclick = function(event){
+            carregarMenu();
+        }
+</script>
+
+<script>
+    var linkNovo = document.querySelector("#menuPedido");
+        linkNovo.onclick = function(event){
+            iniciaPedido();
+        }
+</script>
+
+<script>
+var linkNovo = document.querySelector("#menuCliente");
+    linkNovo.onclick = function(event){
+        carregarCliente();
+    }
+</script>
+
+<script>
+    var linkNovo = document.querySelector("#menuLogin");
+        linkNovo.onclick = function(event){
+            carregarFormLogin();
+        }
+</script>
+
+<!-- Pedido -->
+<script src="css/pedido_front/pedido_service.js"></script>
+<script src="css/pedido_front/pedido_tabela.js"></script>
+<script src="css/pedido_front/pedido_form.js"></script>
+<script src="css/pedido_front/pedido_controller.js"></script>
+
+<!-- Menu-->
+<script src="css/menu_front/menu_service.js"></script>
+<script src="css/menu_front/menu_tabela.js"></script>
+<script src="css/menu_front/menu_form.js"></script>
+<script src="css/menu_front/menu_controller.js"></script>
+
+<!-- Cliente -->
+<script src="css/cliente_front/cliente_service.js"></script>
+<script src="css/cliente_front/cliente_tabela.js"></script>
+<script src="css/cliente_front/cliente_form.js"></script>
+<script src="css/cliente_front/cliente_controller.js"></script>
+
+<!-- Login -->
+<script src="css/login_front/login_service.js"></script>
+<script src="css/login_front/login_form.js"></script>
+<script src="css/login_front/login_controller.js"></script>
+ 
+<script src="app.js"></script>
+
+</html>
