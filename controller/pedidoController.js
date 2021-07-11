@@ -81,3 +81,35 @@ exports.buscarPedido = (req, res) => {
         })
     }
 }
+
+exports.deletarPedido = (req, res) => {
+    const id = +req.params.nr_pedido;
+  
+    if(isNaN(id)){
+        const error = {
+            status: 400,
+            msg: "Id deve ser um numero"
+        }
+        res.status(error.status).json(error)
+    }
+    else{
+        pedidoRepository.buscarPorId(id, (erro, pedido) => {
+            if(erro){
+                res.status(erro.status).json(erro)
+            }
+            else {
+                pedidoRepository.deletar (id, (erro, id) => {
+                    if(erro){
+                        res.status(erro.status).json(erro)
+                    }
+                    else {
+                        const msg = {
+                            msg: "Pedido deletado com sucesso."
+                        }
+                        res.json(msg)
+                    }        
+                })
+            }
+        })
+    }
+}

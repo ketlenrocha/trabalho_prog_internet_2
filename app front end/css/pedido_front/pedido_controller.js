@@ -39,8 +39,9 @@ function onCancelarPedido(){
 }
 
 function onDeletarPedido(nr_pedido){
-    deletarProduto(nr_pedido, (erro, pedido) => {
-        alert(`Produto ${pedido.nr_pedido} removido com sucesso!`);
+
+    deletarPedido(nr_pedido, (erro, pedido) => {
+        alert(`Pedido removido com sucesso!`);
         carregarPedido();
     });
 }

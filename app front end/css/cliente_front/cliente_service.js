@@ -122,10 +122,9 @@ function atualizarCliente(id, cliente, callback) {
     xhttp.setRequestHeader("Content-Type","application/json");
     localStorage.getItem('token')
     const token  = localStorage.getItem('token')
-    alert(` ${token} `);
+    
 
     xhttp.setRequestHeader("x-auth-token", localStorage.getItem('token'))
     xhttp.send(JSON.stringify(cliente));
 
-    alert(` ${xhttp.responseText} `);
 }

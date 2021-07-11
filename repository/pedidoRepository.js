@@ -55,3 +55,28 @@ exports.buscarPorId = (nr_pedido, callback) => {
         }
     })
 }
+
+exports.deletar = (id, callback) => {
+    const sql = `DELETE FROM pedido WHERE nr_pedido=?`;
+    conexao.query(sql, [id], (err, rows) => {
+        if(err){
+            const error = {
+                status: 500,
+                msg: err
+            }
+            callback(err, null);
+        }
+        else {
+            if(rows.affectedRows){
+                callback(null, id);
+            }
+            else {
+                const error = {
+                    status: 500,
+                    msg: err
+                }
+                callback(err, null); 
+            }
+        }
+    })            
+}
