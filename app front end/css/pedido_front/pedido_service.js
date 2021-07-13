@@ -3,6 +3,7 @@ const URI_listar = 'http://localhost:3000/api/pedido/listarPedido'
 const URI_buscar = 'http://localhost:3000/api/pedido/buscarPedido'
 const URI_inserir = 'http://localhost:3000/api/pedido/inserirPedido'
 const URI_deletar = 'http://localhost:3000/api/pedido/deletarPedido'
+const atualizar = 'http://localhost:3000/api/pedido/atualizarPedido'
 
 function listarPedido(callback) {
     const xhttp = new XMLHttpRequest();
@@ -138,7 +139,7 @@ function atualizarPedido(id, pedido, callback) {
             }
         }
     };
-    xhttp.open("PUT", URI+"/"+id, true);
+    xhttp.open("PUT", URI +"/"+id, true);
     xhttp.setRequestHeader("Content-Type","application/json");
     xhttp.send(JSON.stringify(pedido));
 }
